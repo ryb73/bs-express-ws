@@ -1,0 +1,16 @@
+{
+    "name": "@ryb73/bs-express-ws",
+    "bs-dependencies": ["bs-express"],
+    "sources": [
+        {
+            "dir": "src",
+            "public": ["ExpressWs"],
+        },
+        {
+            "dir": "test",
+            "type": "dev"
+        }
+    ],
+    "refmt": 3,
+    "bsc-flags": [ "-w -10", "-bs-super-errors" ]
+}
