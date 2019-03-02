@@ -1,6 +1,6 @@
 {
   "name": "@ryb73/bs-express-ws",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bucklescript bindings for https://www.npmjs.com/package/express-ws",
   "main": "index.js",
   "repository": {
