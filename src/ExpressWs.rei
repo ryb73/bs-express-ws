@@ -10,3 +10,4 @@ let listen: (wsApp, string, (ws, Express.Request.t) => unit) => unit;
 let onError: (ws, ErrorEvent.t => unit) => unit;
 let onMessage: (ws, MessageEvent.t => unit) => unit;
 let onClose: (ws, CloseEvent.t => unit) => unit;
+let send: (ws, string) => unit;

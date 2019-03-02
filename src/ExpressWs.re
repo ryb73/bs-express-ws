@@ -24,3 +24,5 @@ external onMessage: ws => ([@bs.as "message"] _) => (MessageEvent.t => unit) => 
 [@bs.send]
 external onClose: ws => ([@bs.as "close"] _) => (Js.Json.t => unit) => unit = "on";
 let onClose = (ws, cb) => onClose(ws, json => cb(CloseEvent.t_decode(json)));
+
+[@bs.send] external send: ws => string => unit = "";

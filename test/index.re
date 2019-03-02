@@ -3,7 +3,10 @@ let wsApp = ExpressWs.make(app);
 
 ExpressWs.listen(wsApp, "/", (ws, _) => {
     ExpressWs.onClose(ws, Js.log2("Close"));
-    ExpressWs.onMessage(ws, Js.log2("Message"));
+    ExpressWs.onMessage(ws, m => {
+        Js.log2("Message", m);
+        ExpressWs.send(ws, m);
+    });
     ExpressWs.onError(ws, Js.log2("Error"));
 });
 
