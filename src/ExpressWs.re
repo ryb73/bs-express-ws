@@ -7,9 +7,12 @@ module MessageEvent = { type t = string; };
 
 external fromApp: Express.App.t => wsApp = "%identity";
 
-[@bs.module] external apply: Express.App.t => unit = "express-ws";
-let make = (app) => {
-    apply(app);
+[@bs.module]
+external apply:
+    Express.App.t => (~server: Express.HttpServer.t=?) => unit = "express-ws";
+
+let make = (~server=?, app) => {
+    apply(app, ~server?);
     fromApp(app);
 };
 

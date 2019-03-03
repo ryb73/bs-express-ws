@@ -1,7 +1,10 @@
 let app = Express.App.make();
-let wsApp = ExpressWs.make(app);
 
-ExpressWs.listen(wsApp, "/", (ws, _) => {
+let server = Express.App.listen(app, ~port=3001, ());
+
+let wsApp = ExpressWs.make(~server, app);
+
+ExpressWs.listen(wsApp, "/ws", (ws, _) => {
     ExpressWs.onClose(ws, Js.log2("Close"));
     ExpressWs.onMessage(ws, m => {
         Js.log2("Message", m);
@@ -9,5 +12,3 @@ ExpressWs.listen(wsApp, "/", (ws, _) => {
     });
     ExpressWs.onError(ws, Js.log2("Error"));
 });
-
-Express.App.listen(app, ~port=3000, ());
