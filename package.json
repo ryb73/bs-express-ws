@@ -7,6 +7,11 @@
     "type": "git",
     "url": "git@github.com:ryb73/bs-express-ws.git"
   },
+  "files": [
+    "/lib/js/src",
+    "/bsconfig.json",
+    "/src"
+  ],
   "bugs": {
     "url": "https://github.com/ryb73/bs-express-ws/issues"
   },
