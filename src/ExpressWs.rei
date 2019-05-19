@@ -1,7 +1,7 @@
 type wsApp;
 type ws;
 
-module CloseEvent = CloseEvent;
+module CloseEvent: { type t; };
 module ErrorEvent: { type t; };
 module MessageEvent: { type t = string; };
 
