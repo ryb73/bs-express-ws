@@ -8,7 +8,6 @@
     "url": "git@github.com:ryb73/bs-express-ws.git"
   },
   "files": [
-    "/lib/js/src",
     "/bsconfig.json",
     "/src"
   ],
@@ -33,10 +32,13 @@
     "postinstall": "[ ! -f package-links.json ] || ppl link-file"
   },
   "peerDependencies": {
-    "bs-platform": "^5.0.0"
+    "bs-platform": "^5.0.0 || ^6.0.0"
   },
   "dependencies": {
-    "bs-express": "^0.12.0",
+    "bs-express": "^1.0.0",
     "express-ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^6.0.0"
   }
 }
